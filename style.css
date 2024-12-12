@@ -76,12 +76,12 @@ form input:not([type="submit"]) {
 
 #paper-image {
   width: 100%;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .bill {
-    transition: 1s;
-    opacity: 0;
+  transition: 1s;
+  opacity: 0;
   /* display: none; */
   pointer-events: none;
   border: 1px solid gray;
@@ -119,7 +119,7 @@ form input:not([type="submit"]) {
 }
 
 select {
-  padding: 13px; 
+  padding: 13px;
   width: 92px;
 }
 .row {
@@ -137,4 +137,15 @@ select {
 .parent {
   /* display: flex;
   justify-content: space-between; */
+}
+@media (max-width: 800px) {
+  .paper {
+    width: 300px;
+  }
+  section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: column-reverse;
+  }
 }
