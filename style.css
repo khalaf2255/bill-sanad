@@ -150,3 +150,9 @@ select {
     flex-direction: column-reverse;
   }
 }
+#download_bill {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+    transition: .5s;
+}

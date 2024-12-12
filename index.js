@@ -37,17 +37,26 @@ document.querySelector("form").addEventListener("submit", function (e) {
 });
 
 document.getElementById("screenshotBtn").addEventListener("click", function () {
+  this.style.opacity = "0"
+
   const captureElement = document.getElementById("capture");
   html2canvas(captureElement).then((canvas) => {
     // Append the canvas to the output div
     document.getElementById("output").innerHTML = "";
-    document.getElementById("output").appendChild(canvas);
-
+    
     // Optionally, convert the canvas to a downloadable image
     const link = document.createElement("a");
     link.download = "My Bill.png";
+    link.id = "download_bill";
     link.href = canvas.toDataURL();
-    link.textContent = "Download Bill";
+    link.textContent = "تنزيل الفاتورة";
+    
     document.getElementById("output").appendChild(link);
+    document.getElementById("output").appendChild(canvas);
+
+    setTimeout(() => {
+      this.style.opacity = "1"
+        
+      }, 10);
   });
 });
