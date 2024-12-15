@@ -23,12 +23,12 @@
               <div class="row">
                 <div class="input_label">
                   <label for="">الطول</label>
-                  <input type="number" id="paper_width" value="220" />
+                  <input type="text" id="paper_height" value="100" />
                 </div>
-
+                
                 <div class="input_label">
                   <label for="">العرض</label>
-                  <input type="number" id="paper_height" value="120" />
+                <input type="text" id="paper_width" value="70" />
                 </div>
                 <div class="input_label">
                   <label for="">عدد الاوجه</label>
@@ -50,7 +50,7 @@
 
                <div class="input_label">
                 <label for="">الكمية</label>
-                <input type="number" id="quantity" value="10" />
+                <input type="text" id="quantity" value="10" />
               </div>
               </div>
             </div>
@@ -58,8 +58,8 @@
             <input type="submit" value="معرفة السعر" />
           </form>
         </div>
-        <div class="paper">
-          <img src="paper.jpg" id="paper-image" alt="" />
+        <div class="paper paper_parent_image">
+          <img src="Cart.jpg" id="paper-image" alt="" />
         </div>
       </section>
       <div class="bill" id="capture">
@@ -80,6 +80,9 @@
         </button>
         <div class="bill_title">تفاصيل فاتورتك</div>
         <div class="bill_body">
+          <div class="parent">
+            عدد الكروت فى الفرخ الواحد: <span class="carts_bill"></span>
+          </div>
           <div class="parent">
             طول الفرخ: <span class="width_bill"></span>
           </div>
