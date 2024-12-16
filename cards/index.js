@@ -22,6 +22,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
   const quantityBill = document.querySelector(".quantity_bill");
   const carts_bill = document.querySelector(".carts_bill");
   const bill = document.querySelector(".bill");
+  const far5CountBill = document.querySelector(".far5_count_bill");
 
   price.textContent = "";
   // paper_parent_image.innerHTML = "";
@@ -54,15 +55,24 @@ document.querySelector("form").addEventListener("submit", function (e) {
   // let leftCards = Math.ceil(lengthCards - lengthCards * (+far5[1] / 10));
   console.log(far5Price);
 
-  // console.log(lengthCards);
+  const selectHtml = {
+    6: 'كوشية 150 جرام',
+    11: 'كوشية 200 جرام',
+    13: 'كوشية 300 جرام',
+  }
+
+  console.log(selectHtml[material.value]);
+   
+ 
 
   price.textContent = far5Price + " جنية";
 
   // ----------------------------
   paperWidthBill.textContent = paperWidthInpt.value + " سم";
   paperHeightBill.textContent = paperHeightInpt.value + " سم";
+  far5CountBill.textContent = +(quantity.value / lengthCards).toFixed(1);
   facesBill.textContent = faces.value;
-  materialBill.textContent = material.value;
+  materialBill.textContent = selectHtml[material.value];
   quantityBill.textContent = quantity.value;
   carts_bill.textContent = lengthCards;
   // paper.style.height = +paperHeightInpt.value + "px";
@@ -70,15 +80,18 @@ document.querySelector("form").addEventListener("submit", function (e) {
   // bill.style.display = "block";
   bill.style.opacity = "1";
   bill.style.pointerEvents = "none";
+
+  console.log(far5CountBill.textContent);
+  
 });
 
 document.getElementById("screenshotBtn").addEventListener("click", function () {
   this.style.opacity = "0";
+  document.getElementById("output").innerHTML = "";
 
   const captureElement = document.getElementById("capture");
   html2canvas(captureElement).then((canvas) => {
     // Append the canvas to the output div
-    document.getElementById("output").innerHTML = "";
 
     // Optionally, convert the canvas to a downloadable image
     const link = document.createElement("a");
