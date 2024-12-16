@@ -1,5 +1,6 @@
 const maxWidth = 100;
 const maxHeight = 70;
+const staticSercices = 200;
 const imgCard = `<img src="paper.jpg" id="paper-image" alt="" />`;
 document.querySelector("form").addEventListener("submit", function (e) {
   e.preventDefault();
@@ -9,6 +10,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
   const faces = document.getElementById("faces");
   const material = document.getElementById("material");
   const quantity = document.getElementById("quantity");
+  const card_price = document.getElementById("card_price");
 
   const price = document.getElementById("price");
   const paper = document.getElementById("paper-image");
@@ -56,14 +58,12 @@ document.querySelector("form").addEventListener("submit", function (e) {
   console.log(far5Price);
 
   const selectHtml = {
-    6: 'كوشية 150 جرام',
-    11: 'كوشية 200 جرام',
-    13: 'كوشية 300 جرام',
-  }
+    6: "كوشية 150 جرام",
+    11: "كوشية 200 جرام",
+    13: "كوشية 300 جرام",
+  };
 
   console.log(selectHtml[material.value]);
-   
- 
 
   price.textContent = far5Price + " جنية";
 
@@ -75,14 +75,17 @@ document.querySelector("form").addEventListener("submit", function (e) {
   materialBill.textContent = selectHtml[material.value];
   quantityBill.textContent = quantity.value;
   carts_bill.textContent = lengthCards;
+  card_price.textContent = 200 + (quantity.value / 500) * 400;
+  console.log(card_price.textContent);
+
   // paper.style.height = +paperHeightInpt.value + "px";
   // paper.style.width = +paperWidthInpt.value + "px";
   // bill.style.display = "block";
+
   bill.style.opacity = "1";
   bill.style.pointerEvents = "none";
 
   console.log(far5CountBill.textContent);
-  
 });
 
 document.getElementById("screenshotBtn").addEventListener("click", function () {

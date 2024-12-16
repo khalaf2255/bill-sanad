@@ -73,7 +73,7 @@
         
         <thead>
           <tr>
-            <td colspan="2">تفاصيل فاتورتك 
+            <th colspan="2" >تفاصيل فاتورتك 
               <button id="screenshotBtn" title="screenshot">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -127,15 +127,24 @@
         <tfoot>
           <tr>
             <td>
-              التكلفة الإجمالية:
+              تكلفة الأفرخ:
             </td>
             <td>
               <span id="price"></span>
             </td>
           </tr>
+          <tr>
+            <td>
+              تكلفة الكروت:
+            </td>
+            <td>
+              <span id="card_price"></span>
+            </td>
+          </tr>
         </tfoot>
       </table>
       <div id="output"></div>
+     
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
