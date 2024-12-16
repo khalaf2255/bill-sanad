@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Amiri", serif;
+  font-weight: 700;
+  font-style: normal;
+  min-height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+main {
+  min-height: inherit;
+}
+main h1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.all_services {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+main .service {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(128, 128, 128, 0.427);
+  padding: 1rem;
+}
+main .service .title {
+    margin-bottom: 1rem;
+}
+main .service .card_img {
+  width: 200px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+}
+main .service .card_img img {
+  width: inherit;
+}

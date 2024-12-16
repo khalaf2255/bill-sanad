@@ -57,7 +57,7 @@ form {
 }
 
 form input:not([type="submit"]) {
-  width: 92px;
+  width: 130px;
   padding: 5px;
   height: 46px;
   text-align: center;
@@ -130,7 +130,7 @@ td {
 
 select {
   padding: 13px;
-  width: 92px;
+  width: 130px;
 }
 .row {
   display: flex;
