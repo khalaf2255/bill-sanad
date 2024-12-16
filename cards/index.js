@@ -57,25 +57,25 @@ document.querySelector("form").addEventListener("submit", function (e) {
   // let leftCards = Math.ceil(lengthCards - lengthCards * (+far5[1] / 10));
   console.log(far5Price);
 
-  const selectHtml = {
+  const selectHtmlMaterial = {
     6: "كوشية 150 جرام",
     11: "كوشية 200 جرام",
     13: "كوشية 300 جرام",
   };
 
-  console.log(selectHtml[material.value]);
+  console.log(selectHtmlMaterial[material.value]);
 
-  price.textContent = far5Price + " جنية";
+  price.textContent = far5Price * faces.value + " جنية";
 
   // ----------------------------
   paperWidthBill.textContent = paperWidthInpt.value + " سم";
   paperHeightBill.textContent = paperHeightInpt.value + " سم";
   far5CountBill.textContent = +(quantity.value / lengthCards).toFixed(1);
   facesBill.textContent = faces.value;
-  materialBill.textContent = selectHtml[material.value];
+  materialBill.textContent = selectHtmlMaterial[material.value];
   quantityBill.textContent = quantity.value;
   carts_bill.textContent = lengthCards;
-  card_price.textContent = 200 + (quantity.value / 500) * 400;
+  card_price.textContent = (( (quantity.value / 500) * 400) * faces.value) + 200 ;
   console.log(card_price.textContent);
 
   // paper.style.height = +paperHeightInpt.value + "px";
