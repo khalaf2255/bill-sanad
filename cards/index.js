@@ -56,7 +56,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
 
   // console.log(lengthCards);
 
-  price.textContent = paperWidthInpt.value * paperHeightInpt.value + " جنية";
+  price.textContent = far5Price + " جنية";
 
   // ----------------------------
   paperWidthBill.textContent = paperWidthInpt.value + " سم";

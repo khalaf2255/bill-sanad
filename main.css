@@ -25,6 +25,7 @@ main h1 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 main .service {
@@ -34,7 +35,7 @@ main .service {
   padding: 1rem;
 }
 main .service .title {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 main .service .card_img {
   width: 200px;
@@ -44,4 +45,6 @@ main .service .card_img {
 }
 main .service .card_img img {
   width: inherit;
+  box-shadow: 0px 0px 10px #333;
+  border-radius: 10px;
 }
