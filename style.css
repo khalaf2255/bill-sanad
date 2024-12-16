@@ -75,7 +75,12 @@ form input:not([type="submit"]) {
   font-weight: 700;
   font-style: normal;
 }
-
+table {
+  position: relative;
+}
+td {
+  padding: 2px 10px;
+}
 #paper-image {
   width: 100%;
   transition: 0.5s;
@@ -86,11 +91,13 @@ form input:not([type="submit"]) {
   opacity: 0;
   /* display: none; */
   pointer-events: none;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   margin-top: 2rem;
   border-radius: 5px;
   position: relative;
   min-width: 300px;
+  display: flex;
+  flex-direction: column;
 }
 .bill_body {
   padding: 10px;
@@ -153,8 +160,9 @@ select {
   }
 }
 #download_bill {
-    text-align: center;
-    font-size: 25px;
-    margin-top: 10px;
-    transition: .5s;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
+  transition: 0.5s;
+  pointer-events: all;
 }
