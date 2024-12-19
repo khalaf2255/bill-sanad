@@ -76,8 +76,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
   quantityBill.textContent = quantity.value;
   carts_bill.textContent = lengthCards;
   card_price.textContent = (( (quantity.value / 500) * 400) * faces.value) + 200 ;
-  console.log(card_price.textContent);
-
+ 
   // paper.style.height = +paperHeightInpt.value + "px";
   // paper.style.width = +paperWidthInpt.value + "px";
   // bill.style.display = "block";
@@ -85,8 +84,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
   bill.style.opacity = "1";
   bill.style.pointerEvents = "none";
 
-  console.log(far5CountBill.textContent);
-});
+ });
 
 document.getElementById("screenshotBtn").addEventListener("click", function () {
   this.style.opacity = "0";
