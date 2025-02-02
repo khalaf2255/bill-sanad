@@ -1,6 +1,6 @@
 const maxWidth = 100;
 const maxHeight = 70;
-const staticSercices = 200;
+const staticServices = 200;
 const imgCard = `<img src="paper.jpg" id="paper-image" alt="" />`;
 document.querySelector("form").addEventListener("submit", function (e) {
   e.preventDefault();
@@ -25,6 +25,8 @@ document.querySelector("form").addEventListener("submit", function (e) {
   const carts_bill = document.querySelector(".carts_bill");
   const bill = document.querySelector(".bill");
   const far5CountBill = document.querySelector(".far5_count_bill");
+  const carts_count_height = document.querySelector(".carts_count_height");
+  const carts_count_width = document.querySelector(".carts_count_width");
 
   price.textContent = "";
   // paper_parent_image.innerHTML = "";
@@ -39,6 +41,10 @@ document.querySelector("form").addEventListener("submit", function (e) {
   console.log("allParts1 => " + allParts1, "allParts2 => " + allParts2);
 
   const lengthCards = allParts2 > allParts1 ? allParts2 : allParts1;
+
+  allParts2 > allParts1
+    ? paper.classList.add("rotate90")
+    : paper.classList.remove("rotate90");
 
   // for (let i = 0; i < lengthCards; i++) {
   //   const numCard = `<span style='position: absolute'>${i + 1}</span>`;
@@ -65,9 +71,11 @@ document.querySelector("form").addEventListener("submit", function (e) {
 
   console.log(selectHtmlMaterial[material.value]);
 
-  price.textContent = far5Price * faces.value + " جنية";
+  price.textContent = far5Price + " جنية";
 
   // ----------------------------
+  carts_count_height.textContent = allParts2;
+  carts_count_width.textContent = allParts1;
   paperWidthBill.textContent = paperWidthInpt.value + " سم";
   paperHeightBill.textContent = paperHeightInpt.value + " سم";
   far5CountBill.textContent = +(quantity.value / lengthCards).toFixed(1);
@@ -75,16 +83,16 @@ document.querySelector("form").addEventListener("submit", function (e) {
   materialBill.textContent = selectHtmlMaterial[material.value];
   quantityBill.textContent = quantity.value;
   carts_bill.textContent = lengthCards;
-  card_price.textContent = (( (quantity.value / 500) * 400) * faces.value) + 200 ;
- 
+  card_price.textContent =
+    (quantity.value / 500) * 400 * faces.value + staticServices;
+
   // paper.style.height = +paperHeightInpt.value + "px";
   // paper.style.width = +paperWidthInpt.value + "px";
   // bill.style.display = "block";
 
   bill.style.opacity = "1";
   bill.style.pointerEvents = "none";
-
- });
+});
 
 document.getElementById("screenshotBtn").addEventListener("click", function () {
   this.style.opacity = "0";

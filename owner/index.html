@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Scheherazade+New:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Bill</title>
+    <script defer src="index.js"></script>
+  </head>
+  <body dir="rtl">
+    <center>
+      <!-- <h1>صلي على النبي</h1> -->
+    </center>
+     <main>
+      <h1 align="center"> المقاسات الخاصة بالشركة</h1>
+      <section>
+        <div class="controls">
+          <form action="">
+            <div class="inputs">
+              <div class="row">
+                <div class="input_label">
+                  <label for="paper_height">الطول</label>
+                  <input type="text" id="paper_height" value="9" />
+                </div>
+                
+                <div class="input_label">
+                  <label for="paper_width">العرض</label>
+                <input type="text" id="paper_width" value="5" />
+                </div>
+                
+
+
+                <div class="input_label">
+                  <label for="faces">عدد الاوجه</label>
+                  <select name="" id="faces">
+                    <option value="1">وجة واحد</option>
+                    <option value="2">وجهان</option>
+                  </select>
+                </div>
+   
+               <div class="input_label">
+                <label for="material">الخامة</label>
+
+                <select name="" id="material">
+                  <option name="كوشية 150 جرام" value="6">كوشية 150 جرام</option>
+                  <option name="كوشية 200 جرام" value="11">كوشية 200 جرام</option>
+                  <option name="كوشية 300 جرام" value="13">كوشية 300 جرام</option>
+                </select>
+               </div>
+
+               <div class="input_label">
+                <label for="quantity">الكمية</label>
+                <input type="text" id="quantity" value="1000" />
+              </div>
+              </div>
+            </div>
+
+            <input type="submit" value="معرفة السعر" />
+          </form>
+        </div>
+        <div class="paper paper_parent_image">
+          <img src="Cart.jpg" id="paper-image" alt="" />
+        </div>
+      </section>
+      <div class="bill" id="capture">
+    
+
+      <table border="" cellpadding="7">
+        
+        <thead>
+          <tr>
+            <th colspan="2" >تفاصيل فاتورتك 
+              <button id="screenshotBtn" title="screenshot">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-camera-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                  <path
+                    d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"
+                  />
+                </svg>
+              </button>
+       
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          
+      
+          <tr>
+            <td>طول الكارت: </td>
+            <td><span class=" height_bill"></span></td>
+          </tr>
+          <tr>
+            <td>عرض الكارت: </td>
+            <td><span class="width_bill"></span></td>
+          </tr>
+          
+          <tr>
+            <td>عدد الكروت فى الفرخ الواحد بالطول: </td>
+            <td><span class="carts_count_height"></span></td>
+          </tr>
+          <tr>
+            <td>عدد الكروت فى الفرخ الواحد بالعرض: </td>
+            <td><span class="carts_count_width"></span></td>
+          </tr>
+          <tr>
+            <td>أكبر عدد من الكروت فى الفرخ الواحد : </td>
+            <td><span class="carts_bill"></span></td>
+          </tr>
+          <tr>
+            <td>عدد الأوجه: </td>
+            <td><span class="faces_bill"></span></td>
+          </tr>
+          <tr>
+            <td>خامة الفرخ: </td>
+            <td><span class="material_bill"></span></td>
+          </tr>
+          <tr>
+            <td>عدد الأفرخ: </td>
+            <td><span class="far5_count_bill"></span></td>
+          </tr>
+          <tr>
+            <td>الكمية المطلوبة: </td>
+            <td><span class="quantity_bill"></span></td>
+          </tr>
+   
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>
+              تكلفة الأفرخ:
+            </td>
+            <td>
+              <span id="price"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              تكلفة الكروت:
+            </td>
+            <td>
+              <span id="card_price"></span>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+      <div id="output"></div>
+     
+    </main> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  </body>
+</html>
